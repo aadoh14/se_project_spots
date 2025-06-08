@@ -42,16 +42,26 @@
   margin-top: auto;
   border: none;
   opacity: 70%;
-
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  height: auto;
+  background: transparent
 }
 
 .profile__add-btn{
   margin-left: auto;
+  margin-top: auto;
   color: #fcf5e5;
   background-color:#212121;
   width: 149px;
   height: 52px;
-
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 @media screen and (max-width:627px) {
