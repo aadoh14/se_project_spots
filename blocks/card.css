@@ -13,7 +13,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-  margin: 0;
+  margin: 16px 0 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -26,10 +26,13 @@
 }
 
 .card__like-btn{
-  background-image: url(../images/Dark\ like.svg);
+  background-image: url(../images/Darkheart.svg);
   width: 23px;
   height: 20px;
   border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: transparent;
   opacity: 40%;
 }
