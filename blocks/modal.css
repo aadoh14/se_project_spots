@@ -103,8 +103,9 @@
   border: none;
 }
 
-@media screen and (max-width: 300px;) {
+@media screen and (max-width: 627px) {
   .modal__submit-btn{
+    max-width: 288px;
     margin:0;
     width:100%;
   }
