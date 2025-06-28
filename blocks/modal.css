@@ -103,6 +103,61 @@
   border: none;
 }
 
+.modal__image-container {
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  color:white;
+}
+
+.modal__close-btn_type_preview {
+  top:0;
+  right: -52.5px;
+}
+
+.modal_type_preview {
+  padding: 0 16px;
+}
+
+@media screen and (max-width: 627px) {
+  .modal__close-btn_type_preview {
+    top:-48px;
+    right: 0;
+  }
+
+  .modal__title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .modal__label {
+    margin-bottom: 16px;
+  }
+
+  .modal__input {
+    height: 48px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .modal__submit-btn {
+    max-width: 288px;
+    width:100%;
+    margin-top:32px;
+  }
+
+}
+
 @media screen and (max-width: 627px) {
   .modal__submit-btn{
     max-width: 288px;
