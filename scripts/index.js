@@ -100,7 +100,7 @@ editProfileCloseBtn.addEventListener("click", function (){
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
 });
-
+``
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
@@ -122,13 +122,18 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  console.log(nameInput.value, linkInput.value);
-  closeModal(newPostModal);;
-   nameInput.value = "";
+  const cardElement = getCardElement({
+    name: nameInput.value,
+    link: linkInput.value,
+  });
+  cardsList.prepend(cardElement);
+  closeModal(newPostModal);
+  nameInput.value = "";
   linkInput.value = "";
 }
 
 addCardFormElement.addEventListener('submit', handleAddCardSubmit);
+
 
 
 function openModal(modal) {

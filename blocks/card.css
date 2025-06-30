@@ -10,6 +10,10 @@
   border-radius: 8px;
 }
 
+.card__image:hover{
+  cursor: pointer;
+}
+
 .card__title{
   max-width: 413px;
   white-space: nowrap;
@@ -50,7 +54,7 @@
   opacity: 100%;
 }
 
-.card__like-btn:hover{
+.card__like-btn_active:active{
   opacity: 40%;
 }
 
