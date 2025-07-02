@@ -1,6 +1,6 @@
 const initialCards = [
   {
-    name:"GOlden Gate Bridge",
+    name:"Golden Gate Bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
   {
@@ -45,8 +45,8 @@ const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
 const addCardFormElement = newPostModal.querySelector(".modal__form");
-const nameInput = addCardFormElement.querySelector("#card-image-input");
-const linkInput = addCardFormElement.querySelector("#profile-caption-input");
+const linkInput = addCardFormElement.querySelector("#card-image-input");
+const nameInput = addCardFormElement.querySelector("#profile-caption-input");
 
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
@@ -113,7 +113,7 @@ function handleEditProfileSubmit (evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  openModal(editProfileModal);
+  closeModal(editProfileModal);
   console.log("submitting");
 }
 
