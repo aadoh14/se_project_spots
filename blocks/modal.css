@@ -84,6 +84,13 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
+  box-sizing: border-box;
+  opacity: 40%;
+}
+
+.modal__input:hover{
+  cursor: pointer;
+  opacity: 100%;
 }
 
 .modal__input::placeholder {
@@ -103,6 +110,11 @@
   line-height: 1;
   border-radius: 8px;
   border: none;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 
 .modal__image-container {
@@ -131,6 +143,11 @@
   box-sizing: border-box;
   white-space: nowrap;
   text-align: center;
+  margin: 0;
+  padding: 4px 8px;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
 
 }
 
@@ -162,6 +179,15 @@
     margin-bottom: 24px;
   }
 
+  .modal__close-btn {
+    top: 22px;
+    right: 12px;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+  }
+
   .modal__label {
     margin-bottom: 16px;
   }
@@ -170,6 +196,10 @@
     height: 48px;
     font-size: 16px;
     line-height: 1.2;
+  }
+
+  .modal__container {
+    padding: 22px 12px 12px;
   }
 
   .modal__submit-btn {
