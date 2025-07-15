@@ -45,6 +45,7 @@ const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
 const addCardFormElement = newPostModal.querySelector(".modal__form");
+const submitButton = addCardFormElement.querySelector(".modal__submit-btn");
 const linkInput = addCardFormElement.querySelector("#card-image-input");
 const nameInput = addCardFormElement.querySelector("#profile-caption-input");
 
@@ -130,19 +131,39 @@ function handleAddCardSubmit(evt) {
   closeModal(newPostModal);
   nameInput.value = "";
   linkInput.value = "";
+  disableButton(submitButton, settings);
 }
 
 addCardFormElement.addEventListener('submit', handleAddCardSubmit);
 
 
 
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
+
+document.querySelectorAll('.modal').forEach((modal) => {
+  modal.addEventListener('mousedown', function (evt) {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
